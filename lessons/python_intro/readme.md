@@ -15,7 +15,7 @@ title: Optional Python Review
 
 With the Python Review and Best Practices notebook, students should be able to:
 
-* Write a function that requires use of a: list, set, and dictionary. https://www.hackerrank.com/x/library/personal/all/questions/579875/edit
+* Write a function that requires use of a: list, set, and dictionary.
 * Understand at a high level the concept of immutability
 * Have an understanding of how each data type is converted to a boolean, and
 how to check each type for existence

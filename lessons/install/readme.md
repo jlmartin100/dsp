@@ -9,9 +9,9 @@ line and get output like `git version 2.13.5`.
 Macbooks have git pre-installed.
 
 
-### Install [Anaconda](http://continuum.io/downloads).
+### Install [Anaconda](https://www.anaconda.com/products/individual#download-section).
 
-Please install the **3.6 version** if possible.
+Please install the **3.x version** (or the most recent version).
 
 There are two things you can verify to check your install.
 
@@ -43,7 +43,7 @@ import sklearn
 
 ### Q1. Python Version 2 or 3
 
-**Course material for the bootcamp is compatible with Python versions 2.7 and 3.0. All HackerRank Python pre-work is configured for Python 3 only.  Therefore, Python 3 is the recommended version.**  
+**Course material for the bootcamp is compatible with Python versions 3.0. All HackerRank Python pre-work is configured for Python 3 only.  Therefore, Python 3 is the recommended version.**  
 
 Did you install Python 2 or 3? Why?  
 
