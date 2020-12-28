@@ -9,5 +9,5 @@ print(firsts.totalwgt_lb.std(), others.totalwgt_lb.std())
 ### Output:
 -0.088672927072602
 
-This is larger than the computed Cohen effect size for first pregnancy length, which was 0.028879044654449883.  It is also still considerably smaller than the respective standard deviations within the firsts and others data.
+This is larger than the computed Cohen effect size for first pregnancy length, which was 0.028879044654449883.  It is also still considerably smaller than the respective standard deviations within the `firsts` and `others` data.
 
