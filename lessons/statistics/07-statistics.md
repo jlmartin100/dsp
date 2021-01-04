@@ -96,18 +96,18 @@ P_I = 1/300  # P(identical twin)
 
 P( I | TB ) = (P( TB | I ) * P( I )) / P( TB )
 
-The probability of twin brothers given identical twins is 1/2 in the general population:    
+The probability of twin brothers, given identical twins, is 1/2 in the general population:    
 P( TB | I ) = 1/2
 ```python
 P_TB_I = 1/2
 ```
-The probability of twin brothers given fraternal twins is 1/4 in the general population:    
+The probability of twin brothers, given fraternal twins, is 1/4 in the general population:    
 P( TB | F ) = 1/4
 ```python
 P_TB_F = 1/4
 ```
 
-The probability of twin brothers given twins of any type is:
+The probability of twin brothers, given twins of any type, is:
 P( TB ) = 1/2 * P( I ) + 1/4 * P( F )
 ```python
 P_TB = (P_TB_I * P_I) + (P_TB_F * P_F)
@@ -126,6 +126,8 @@ The probability that Elvis was an identical twin, given that he had a twin broth
 
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
+
+#### Response:
 
 Frequentist statistics are based on the assumptions that data are a **repeatable, random** sample, that the underlying **parameters of this data remain constant** during this repeatable process, and that therefore measuring the **frequency** of certain observations in the data will help you arrive at a **maximum likelihood estimate** of those fixed parameters.  
 
