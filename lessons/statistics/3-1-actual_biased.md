@@ -9,7 +9,7 @@
 ```python
 resp = nsfg.ReadFemResp()
 ```
-#### Set up the functions for biasing, as given in the text.
+#### Set up the function for biasing, as given in the text.
 ```
 def BiasPmf(pmf, label):
     new_pmf = pmf.Copy(label=label)
