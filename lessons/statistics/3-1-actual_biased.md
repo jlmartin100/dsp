@@ -31,7 +31,7 @@ biased_pmf = BiasPmf(actual_pmf, label='Observed')
 #### Plot both actual and observed PMFs
 ```python
 thinkplot.PrePlot(2)
-thinkplot.Pmfs([actual_pmf, biased_pmf_numkdhh])
+thinkplot.Pmfs([actual_pmf, biased_pmf])
 thinkplot.Config(xlabel='Number of Children Per Household, Actual & Observed', ylabel='PMF')
 ```
 ![Exercise 3.1 Actual vs Biased PMF Distribution](../../img/TS_3_1_Actual_Biased_PMFs.png)
@@ -39,7 +39,7 @@ thinkplot.Config(xlabel='Number of Children Per Household, Actual & Observed', y
 #### Compute the respective means
 ```python
 print('Actual mean: ', actual_pmf.Mean())
-print('Observed mean: ', biased_pmf_numkdhh.Mean())
+print('Observed mean: ', biased_pmf.Mean())
 ```
 Actual mean:  1.024205155043831
 
