@@ -9,13 +9,13 @@ mu = 178
 sigma = 7.7
 dist = scipy.stats.norm(loc=mu, scale=sigma)
 ```
-#### Check the distribution against the parameters given
+#### Check the distribution against the BRFSS parameters given
 ```python
 dist.mean(), dist std()
 ```
 (178.0, 7.7)
 
-#### Convert given measurements
+#### Convert the given Blue Man Group measurement limitations
 ```python
 # 5'10" = 70"
 # 1 inch = 2.54 cm
@@ -29,7 +29,7 @@ print(f"6 ft 1 in equals {73 * 2.54} cm")
 ```
 6 ft 1 in equals 185.42000000000002 cm
 
-#### Use converted measurements to establish the lower and upper bounds of the CDF
+#### Use converted measurements to establish the lower and upper bounds of the CDF relevant to Blue Man Group admission
 ```python
 lower = dist.cdf(177.8)
 higher = dist.cdf(185.42)
