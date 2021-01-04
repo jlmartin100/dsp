@@ -86,14 +86,62 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+#### Solution:
+Our prior hypotheses are that Elvis could be either fraternal or identical.
+```python
+P_F = 1/125  # P(fraternal twin)
+P_I = 1/300  # P(identical twin)
+```
+#### Bayes Theorem:
+
+P( I | TB ) = (P( TB | I ) * P( I )) / P( TB )
+
+The probability of twin brothers given identical twins is 1/2 in the general population:    
+P( TB | I ) = 1/2
+```python
+P_TB_I = 1/2
+```
+The probability of twin brothers given fraternal twins is 1/4 in the general population:    
+P( TB | F ) = 1/4
+```python
+P_TB_F = 1/4
+```
+
+The probability of twin brothers given twins of any type is:
+P( TB ) = 1/2 * P( I ) + 1/4 * P( F )
+```python
+P_TB = (P_TB_I * P_I) + (P_TB_F * P_F)
+```
+And so, the probability of Elvis being an identical twin, given that he had a twin brother, is:  
+P( I | TB ) = P( TB | I ) * P( I ) / P( TB )
+
+P(I|TB) = ( 1/2 * 1/300 )  /  (( 1/2 * 1/300 ) + ( 1/4 * 1/125 ))
+```python
+Elvis_P_I_TB = (P_TB_I * P_I) / P_TB
+print(f"The probability that Elvis was an identical twin, given that he had a twin brother, is {Elvis_P_I_TB}.")
+```
+The probability that Elvis was an identical twin, given that he had a twin brother, is 0.45454545454545453.
 
 ---
 
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Frequentist statistics are based on the assumptions that data are a **repeatable, random** sample, that the underlying **parameters of this data remain constant** during this repeatable process, and that therefore measuring the **frequency** of certain observations in the data will help you arrive at a **maximum likelihood estimate** of those fixed parameters.  
+
+Bayesian statistics assumes that the data is observed only from the **obtained sample**, that **parameters are unknown and described probabilistically**, that real-world experiments are difficult to repeat, and so the **collection of data is a one-time phenomenon**.  
+
+Frequentist statisticians use point estimates and standard error or confidence intervals, deductions from null hypothesis testing with a pre-set alpha.  In contrast, Bayesian statisticians estimate a prior distribution of the parameter before the data are seen, and then obtain a broad description of a posterior distribution with means and quantiles, where the highest posterior density intervals indicate highest posterior probability.
+
+[George Casella, *Bayesians and Frequentists: Models, Assumptions, and Inferences*](http://archived.stat.ufl.edu/casella/Talks/BayesRefresher.pdf "George Casella, *Bayesians and Frequentists: Models, Assumptions, and Inferences*")
+
+The frequentist definition of probability is such that only repeatable random events have probabilities.  Those probabilities are equal to the long-term frequency of occurrence of those events.  Frequentists do not attach probabilities to hypotheses or to any fixed but unknown values in general. Per the frequentist perspective, such probabilities do not make sense, because the event is not repeatable.
+
+The Bayesian conception of probability is more general. It is perfectly acceptable to assign probabilities to non-repeatable events, since probabilities can be used to represent the uncertainty in any event or hypothesis.
+
+For the frequentist, the maximum likelihood estimate of the population parameter is equal to the sample parameter.  Bayesians agree that the parameter is fixed and unknown, but uncertainty can be represented probabilistically, by defining a probability distribution over the possible values of that parameter and using sample data to update this distribution.
+
+[probabilisticworld.com, *Frequentist and Bayesian Approaches in Statistics*](https://www.probabilisticworld.com/frequentist-bayesian-approaches-inferential-statistics/#Frequentist_and_Bayesian_statistics_%E2%80%94_the_comparison "*Frequentist and Bayesian Approaches in Statistics*")
 
 ---
 
